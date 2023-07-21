@@ -1,6 +1,6 @@
 import {invertBoolean} from "../src/invert-boolean.js";
 
-describe("Test case for invertBoolean", () => {
+describe("Test cases for invertBoolean", () => {
     test("Boolean", () => {
         expect(invertBoolean(true))
             .toBe(false);

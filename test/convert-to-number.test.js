@@ -1,6 +1,6 @@
 import {convertToNumber} from "../src/convert-to-number.js";
 
-describe("Test case for convertToNumber", () => {
+describe("Test cases for convertToNumber", () => {
     test("Number", () => {
         expect(convertToNumber(5))
             .toBe(5);

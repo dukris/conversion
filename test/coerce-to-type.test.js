@@ -1,6 +1,6 @@
 import {coerceToType} from "../src/coerce-to-type.js";
 
-describe("Test case for coerceToType", () => {
+describe("Test cases for coerceToType", () => {
     test("Correct String to Number", () => {
         expect(coerceToType("123", "number"))
             .toBe(123);
@@ -14,6 +14,10 @@ describe("Test case for coerceToType", () => {
             .toBe("true");
     });
     test("Correct String to Boolean", () => {
+        expect(coerceToType("false", "boolean"))
+            .toBe(false);
+    });
+    test("Correct String to Boolean", () => {
         expect(coerceToType("true", "boolean"))
             .toBe(true);
     });
@@ -22,12 +26,12 @@ describe("Test case for coerceToType", () => {
             .toBe(false);
     });
     test("Undefined to Boolean", () => {
-        expect(coerceToType(undefined, "boolean"))
-            .toBe(false);
+        expect(() => coerceToType(undefined, "boolean"))
+            .toThrow(TypeError)
     });
     test("Null to Boolean", () => {
-        expect(coerceToType(null, "boolean"))
-            .toBe(false);
+        expect(() => coerceToType(null, "boolean"))
+            .toThrow(TypeError)
     });
     test("String to BigInt", () => {
         expect(coerceToType("45", "bigint"))

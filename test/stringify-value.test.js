@@ -1,6 +1,6 @@
 import {stringifyValue} from "../src/stringify-value.js";
 
-describe("Test case for stringifyValue", () => {
+describe("Test cases for stringifyValue", () => {
     test("Number", () => {
         expect(stringifyValue(5))
             .toBe('5');

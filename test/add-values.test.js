@@ -1,6 +1,6 @@
 import {addValues} from "../src/add-values.js";
 
-describe("Test case for AddValues", () => {
+describe("Test cases for AddValues", () => {
     test("Number and Number", () => {
         expect(addValues(0, 0))
             .toBe(0);
