@@ -44,7 +44,7 @@ export class ValidatedBoolean {
     }
 
     /**
-     * Check if is boolean.
+     * Check if value is boolean.
      *
      * @returns {boolean} Result
      */
