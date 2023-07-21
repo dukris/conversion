@@ -43,16 +43,4 @@ export class ValidatedBoolean {
         return this.a;
     }
 
-    /**
-     * Check if value is boolean.
-     *
-     * @returns {boolean} Result
-     */
-    isBoolean = () => {
-        if (typeof this.a != "boolean") {
-            throw new TypeError("The value is not boolean!");
-        }
-        return this.a;
-    }
-
 }
