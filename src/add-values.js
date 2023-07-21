@@ -1,4 +1,5 @@
 import {ValidatedValue} from "./validated-value.js";
+import {SumOf} from "./sum-of.js";
 
 /**
  * Add values.
@@ -8,6 +9,8 @@ import {ValidatedValue} from "./validated-value.js";
  * @returns {*} Result
  */
 export function addValues(a, b) {
-    return new ValidatedValue(a).value()
-        + new ValidatedValue(b).value();
+    return new SumOf(
+        new ValidatedValue(a).value(),
+        new ValidatedValue(b).value()
+    ).value();
 }

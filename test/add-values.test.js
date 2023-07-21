@@ -14,12 +14,20 @@ describe("Test cases for AddValues", () => {
             .toBe('strstr');
     });
     test("Number and Boolean", () => {
-        expect(addValues(2, true))
-            .toBe(3);
+        expect(() => addValues(2, true))
+            .toThrow(TypeError);
     });
     test("Boolean and Boolean", () => {
         expect(addValues(false, true))
-            .toBe(1);
+            .toBe(false);
+    });
+    test("Boolean and Boolean", () => {
+        expect(addValues(true, true))
+            .toBe(true);
+    });
+    test("Boolean and Boolean", () => {
+        expect(addValues(false, false))
+            .toBe(false);
     });
     test("Boolean and String", () => {
         expect(addValues(false, 'str'))
@@ -38,7 +46,7 @@ describe("Test cases for AddValues", () => {
             .toBe('2sym')
     });
     test("Number and BigInt", () => {
-        expect(()=>addValues(34, BigInt(2)))
+        expect(() => addValues(34, BigInt(2)))
             .toThrow(TypeError)
     });
     test("String and BigInt", () => {
