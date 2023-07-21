@@ -1,5 +1,6 @@
 import {convertToNumber} from "./convert-to-number.js";
 import {stringifyValue} from "./stringify-value.js";
+import {convertToBoolean} from "./convert-to-boolean.js";
 
 /**
  * Convert value to the specified type.
@@ -15,7 +16,7 @@ export function coerceToType(value, type) {
         case 'string':
             return stringifyValue(value);
         case 'boolean':
-            return !!value;
+            return convertToBoolean(value);
         case 'symbol':
             return Symbol(value);
         case 'bigint':

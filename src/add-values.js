@@ -8,7 +8,7 @@
 export function addValues(a, b) {
     if (a === undefined || b === undefined || a === null || b === null
         || ((typeof a === "object" && !Array.isArray(a)) || (typeof b === "object" && !Array.isArray(b)))) {
-        throw new TypeError("The addition is not possible!");
+        throw new TypeError("The operation is not possible!");
     }
     if (typeof a === "symbol") {
         a = a.description;
