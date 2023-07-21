@@ -1,3 +1,5 @@
+import {ValidatedString} from "./validated-string.js";
+
 /**
  * Convert value to string.
  *
@@ -5,14 +7,6 @@
  * @returns {string} Result
  */
 export function stringifyValue(value) {
-    if(value === undefined){
-        return "undefined";
-    }
-    if (typeof value === "object") {
-        return JSON.stringify(value);
-    }
-    if (typeof value === "symbol") {
-        value = value.description;
-    }
-    return value.toString();
+    return new ValidatedString(value).value()
+        .toString();
 }

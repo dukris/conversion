@@ -1,3 +1,5 @@
+import {ValidatedValue} from "./validated-value.js";
+
 /**
  * Add values.
  *
@@ -6,15 +8,6 @@
  * @returns {*} Result
  */
 export function addValues(a, b) {
-    if (a === undefined || b === undefined || a === null || b === null
-        || ((typeof a === "object" && !Array.isArray(a)) || (typeof b === "object" && !Array.isArray(b)))) {
-        throw new TypeError("The operation is not possible!");
-    }
-    if (typeof a === "symbol") {
-        a = a.description;
-    }
-    if (typeof b === "symbol") {
-        b = b.description;
-    }
-    return a + b;
+    return new ValidatedValue(a).value()
+        + new ValidatedValue(b).value();
 }

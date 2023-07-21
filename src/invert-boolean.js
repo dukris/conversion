@@ -1,3 +1,5 @@
+import {ValidatedBoolean} from "./validated-boolean.js";
+
 /**
  * Return inverted boolean value.
  *
@@ -5,8 +7,5 @@
  * @returns {boolean} Result
  */
 export function invertBoolean(value) {
-    if (typeof value != "boolean") {
-        throw new TypeError("Type of parameter is incorrect!");
-    }
-    return !value;
+    return !(new ValidatedBoolean(value).value());
 }
