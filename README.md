@@ -36,4 +36,4 @@ $ npm run ci
 
 You will need npm 9+ and Node.js 18.16.0+.
 
-Our [rultor image](https://github.com/eo-cqrs/eo-kafka-rultor-image) for CI/CD.
+Our [rultor image](https://github.com/yegor256/rultor-image) for CI/CD.
