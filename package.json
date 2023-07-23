@@ -1,6 +1,6 @@
 {
-  "name": "conversion",
-  "version": "0.1.2",
+  "name": "type_conversions",
+  "version": "0.1.3",
   "private": false,
   "type": "module",
   "scripts": {
