@@ -1,6 +1,6 @@
 {
   "name": "type_conversions",
-  "version": "0.1.4",
+  "version": "0.1.8",
   "description": "Library that provides advanced data transformation functions",
   "type": "module",
   "scripts": {
