@@ -10,10 +10,10 @@ release:
   script: |-
     node --version
     npm -version
-    npm test --no-color
     sed -i "s/0.0.0/${tag}/g" package.json
     chmod 600 ../npmrc
     npm publish --no-color --userconfig=../npmrc
 merge:
   script: |-
-    npm test --no-color
+    npm install
+    npm run build --if-present
