@@ -5,9 +5,8 @@ docker:
 assets:
   npmrc: hizmailovich/coversion-secrets#assets/npmrc
 install: |-
-  sudo npm cache clean -f
-  sudo npm install -g n
-  sudo n latest
+  sudo apt-get update  
+  sudo apt install node.js
   npm install --no-color
 release:
   script: |-
