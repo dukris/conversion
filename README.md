@@ -20,7 +20,7 @@ The library should include the following features:
 ## How to Install
 
 ```shell
-npm install conversion
+npm install type_conversions
 ```
 
 ## How to Contribute
