@@ -1,7 +1,7 @@
 {
-  "name": "@hizmailovich/type_conversions",
+  "name": "type_conversions",
   "version": "0.1.4",
-  "private": false,
+  "description": "Library that provides advanced data transformation functions",
   "type": "module",
   "scripts": {
     "test": "jest"
